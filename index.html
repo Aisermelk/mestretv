@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>MESTRE TV | TV Box e Streaming</title>
+  <meta name="description" content="MESTRE TV — TV Box, streaming, controles, cabos e acessórios.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-v8-project-id="mestre-tv">
+  <div class="topbar"><div class="container"><span data-v8="storeName">MESTRE TV</span><span data-v8="supportText">Tecnologia e entretenimento</span></div></div>
+
+  <header class="header">
+    <div class="container header-row">
+      <a class="logo" href="./">MESTRE <b>TV</b></a>
+      <div class="search"><input id="search" type="search" placeholder="O que você procura?"><button id="searchBtn" aria-label="Buscar">⌕</button></div>
+      <button class="cart-button" id="openCart">🛒 <span>Carrinho</span><strong id="cartCount">0</strong></button>
+    </div>
+    <nav class="nav"><div class="container" id="categories"></div></nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-content">
+        <span class="eyebrow">MESTRE TV</span>
+        <h1>Seu entretenimento.<br><b>Do seu jeito.</b></h1>
+        <p>TV Box, streaming e acessórios para deixar sua experiência mais completa.</p>
+        <a href="#produtos" class="btn primary">Ver produtos</a>
+      </div>
+    </section>
+
+    <section class="benefits"><div class="container benefits-grid">
+      <div><b>Compra fácil</b><span>Escolha e fale conosco</span></div>
+      <div><b>Atendimento</b><span>Suporte pelo WhatsApp</span></div>
+      <div><b>Produtos selecionados</b><span>Catálogo atualizado</span></div>
+      <div><b>Pagamento</b><span>Combine a melhor opção</span></div>
+    </div></section>
+
+    <section class="section" id="produtos">
+      <div class="container">
+        <div class="section-head"><div><span class="eyebrow">CATÁLOGO</span><h2>Produtos em destaque</h2></div><span id="resultCount"></span></div>
+        <div id="products" class="products"><div class="loading">Carregando catálogo...</div></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer"><div class="container footer-row">
+    <div><strong>MESTRE TV</strong><p>TV Box, streaming e acessórios.</p></div>
+    <div><span>Atendimento</span><a id="footerWhatsapp" target="_blank" rel="noopener">WhatsApp</a></div>
+    <div><span data-v8="instagram">@mestre_tv</span><small>© <span id="year"></span> MESTRE TV</small></div>
+  </div></footer>
+
+  <a class="whatsapp" id="whatsappFloat" target="_blank" rel="noopener" aria-label="WhatsApp">◉</a>
+
+  <div class="overlay" id="overlay" hidden></div>
+  <aside class="drawer" id="cartDrawer" aria-label="Carrinho">
+    <div class="drawer-head"><h2>Seu carrinho</h2><button id="closeCart">×</button></div>
+    <div id="cartItems" class="cart-items"></div>
+    <div class="cart-footer"><div><span>Total</span><strong id="cartTotal">R$ 0,00</strong></div><button id="checkout" class="btn primary">Finalizar pelo WhatsApp</button></div>
+  </aside>
+
+  <dialog id="productDialog" class="product-dialog">
+    <button class="dialog-close" id="closeProduct">×</button>
+    <div id="productDetail"></div>
+  </dialog>
+
+  <script src="js/app.js" defer></script>
+  <!-- V8 Loader: mantenha este arquivo no caminho usado pelo seu V8 Loader Universal. -->
+  <script src="js/v8-loader.js" data-project-id="mestre-tv" defer></script>
+</body>
+</html>
