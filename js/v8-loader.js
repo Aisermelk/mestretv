@@ -547,6 +547,10 @@
   }
   function init() {
     if (!PROJECT_ID) { console.warn("[V8] Informe data-project-id no <script> do v8-loader."); return Promise.resolve(null); }
+    if (/^(ID_DO_PROJETO|SEU_PROJECT_ID|ID_DO_PROJECT)$/i.test(PROJECT_ID)) {
+      console.warn('[V8] O data-project-id ainda está com o texto de exemplo ("' + PROJECT_ID + '"). Troque pelo ID real do projeto: painel V8 › Projetos › Editar › aba Geral › "Copiar ID".');
+      return Promise.resolve(null);
+    }
     injectStyle();
     return request("/api/public/config/" + encodeURIComponent(PROJECT_ID)).then(function (data) {
       var cfg = unwrapProject(data);
